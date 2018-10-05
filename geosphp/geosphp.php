@@ -40,6 +40,14 @@ class GEOSGeometry {
 
 	public function interpolate(float $distance) : GEOSGeometry {}
 
+	/* Polygon methods */
+
+	public function exteriorRing() : GEOSGeometry {}
+
+	public function numInteriorRings() : int {}
+
+	public function interiorRingN(int $n) : GEOSGeometry {}
+
 }
 
 class GEOSWKTReader {
