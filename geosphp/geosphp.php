@@ -16,10 +16,29 @@ class GEOSGeometry {
 
 	public function area() : float {}
 
-	public function distance() : float {}
+	public function distance(GEOSGeometry $other) : float {}
 
 	/* Relational methods */
 	public function equalsExact(GEOSGeometry $other, float $epsilon) : bool {}
+
+	public function contains(GEOSGeometry $other) : bool {}
+
+	public function intersects(GEOSGeometry $other) : bool {}
+
+	public function intersection(GEOSGeometry $other) : GEOSGeometry {}
+
+	/* Linestring methods */
+	public function numPoints() : int {}
+
+	public function pointN(int $n) : GEOSGeometry {}
+
+	public function isSimple() : bool {}
+
+	public function isClosed() : bool {}
+
+	public function isRing() : bool {}
+
+	public function interpolate(float $distance) : GEOSGeometry {}
 
 }
 
