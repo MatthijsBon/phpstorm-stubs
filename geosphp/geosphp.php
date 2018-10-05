@@ -22,3 +22,17 @@ class GEOSGeometry {
 	public function equalsExact(GEOSGeometry $other, float $epsilon) : bool {}
 
 }
+
+class GEOSWKTReader {
+
+	public function read(string $string) : GEOSGeometry {}
+
+}
+
+class GEOSWKTWriter {
+
+	public function write(GEOSGeometry $geometry) : string {}
+
+	public function setRoundingPrecision(int $int) : void {}
+
+}
