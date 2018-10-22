@@ -36,15 +36,15 @@ class GEOSGeometry {
 
 	public function union(GEOSGeometry $otherGeom = null) {}
 
-	public function pointOnSurface() {}
+	public function pointOnSurface() : GEOSGeometry {}
 
 	public function centroid() : GEOSGeometry {}
 
 	public function simplify($tolerance, $preserveTopology = false) {}
 
-	public function normalize() {}
+	public function normalize() : GEOSGeometry {}
 
-	public function extractUniquePoints() {}
+	public function extractUniquePoints() : GEOSGeometry {}
 
 
 	/* Geometry Relations */
@@ -88,17 +88,17 @@ class GEOSGeometry {
 
 	public function isClosed() : bool {}
 
-	public function typeName() {}
+	public function typeName()  : string {}
 
-	public function typeId() {}
+	public function typeId() : int {}
 
-	public function getSRID() {}
+	public function getSRID() : int {}
 
 	public function setSRID($srid) {}
 
 
 	/* Collection methods */
-	public function numGeometries() {}
+	public function numGeometries() : int {}
 
 	public function geometryN($num) : GEOSGeometry {}
 
@@ -114,7 +114,7 @@ class GEOSGeometry {
 
 
 	/* LineString methods */
-	public function numPoints() {}
+	public function numPoints() : int {}
 
 	public function pointN($num) : GEOSGeometry {}
 
@@ -126,7 +126,7 @@ class GEOSGeometry {
 
 
 	/* Polygon methods */
-	public function numInteriorRings() {}
+	public function numInteriorRings() : int {}
 
 	public function interiorRingN($num) : GEOSGeometry {}
 
