@@ -14,7 +14,7 @@ class GEOSGeometry {
 
 
 	/* Geometry Operations */
-	public function project(GEOSGeometry $other, $normalized = false) : GEOSGeometry {}
+	public function project(GEOSGeometry $other, $normalized = false) : float {}
 
 	public function interpolate($dist, $normalized = false) : GEOSGeometry {}
 
